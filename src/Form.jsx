@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import ResponseComponent from './ResponseComponent';
-import Api from "./Api.js";
+import Api from "./Api.jsx";
 const Form = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
