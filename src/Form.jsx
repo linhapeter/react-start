@@ -1,16 +1,23 @@
 import React, { useState } from "react";
-// import ResponseComponent from './ResponseComponent';
-import Api from "./Api.jsx";
+import { fetchData } from "./Api.jsx";
+import ResponseContent from "./ResponseContent.jsx";
 const Form = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-
-  const { data: response, error, loading, fetchData } = Api();
+  const [response, setResponse] = useState(null);
+  const [loading, setLoading] = useState(null);
 
   const submitForm = async (e) => {
     e.preventDefault();
 
-    fetchData("https://httpbin.org/post", "post", { name, password });
+    setLoading(true);
+    const params = {
+      url: "https://httpbin.org/post",
+      method: "post",
+      data: { name, password },
+    };
+    setResponse(await fetchData(params));
+    setLoading(false);
   };
   return (
     <div>
@@ -36,22 +43,7 @@ const Form = () => {
           Submit
         </button>
       </form>
-      {loading ? (
-        "Loading..."
-      ) : (
-        <div>
-          {error && <div>Error: {error.message}</div>}
-          {response && (
-            <div>
-              <strong>Response:</strong>
-              <ul>
-                <li>Name: {response.name}</li>
-                <li>Password: {response.password}</li>
-              </ul>
-            </div>
-          )}
-        </div>
-      )}
+      {loading ? "Loading..." : <ResponseContent response={response} />}
     </div>
   );
 };
