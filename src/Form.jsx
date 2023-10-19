@@ -16,7 +16,8 @@ const Form = () => {
       method: "post",
       data: { name, password },
     };
-    setResponse(await fetchData(params));
+    const answer = await fetchData(params);
+    setResponse(answer);
     setLoading(false);
   };
   return (
