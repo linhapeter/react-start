@@ -21,12 +21,10 @@ const Form = () => {
   };
 
   const hanndleNameFieldChange = (e) => {
-    e.preventDefault();
     setName(e.target.value);
   };
 
   const hanndlePasswordFieldChange = (e) => {
-    e.preventDefault();
     setPassword(e.target.value);
   };
 
