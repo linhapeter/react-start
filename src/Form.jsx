@@ -11,11 +11,6 @@ const Form = () => {
     e.preventDefault();
 
     setLoading(true);
-    // const params = {
-    //   url: "https://httpbin.org/post",
-    //   method: "post",
-    //   data: { name, password },
-    // };
     const params = {
       name,
       password,
@@ -24,16 +19,23 @@ const Form = () => {
     setResponse(answer);
     setLoading(false);
   };
+
+  const hanndleNameFieldChange = (e) => {
+    e.preventDefault();
+    setName(e.target.value);
+  };
+
+  const hanndlePasswordFieldChange = (e) => {
+    e.preventDefault();
+    setPassword(e.target.value);
+  };
+
   return (
     <div>
       <form onSubmit={submitForm}>
         <label>
           Name:
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
+          <input type="text" value={name} onChange={hanndleNameFieldChange} />
         </label>
         <br />
         <label>
@@ -41,7 +43,7 @@ const Form = () => {
           <input
             type="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={hanndlePasswordFieldChange}
           />
         </label>
         <button type="submit" disabled={loading}>
