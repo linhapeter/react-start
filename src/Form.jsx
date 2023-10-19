@@ -11,10 +11,14 @@ const Form = () => {
     e.preventDefault();
 
     setLoading(true);
+    // const params = {
+    //   url: "https://httpbin.org/post",
+    //   method: "post",
+    //   data: { name, password },
+    // };
     const params = {
-      url: "https://httpbin.org/post",
-      method: "post",
-      data: { name, password },
+      name,
+      password,
     };
     const answer = await fetchData(params);
     setResponse(answer);
