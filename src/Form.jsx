@@ -5,7 +5,7 @@ const Form = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [response, setResponse] = useState(null);
-  const [loading, setLoading] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const submitForm = async (e) => {
     e.preventDefault();
