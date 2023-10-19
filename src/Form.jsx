@@ -20,11 +20,11 @@ const Form = () => {
     setLoading(false);
   };
 
-  const hanndleNameFieldChange = (e) => {
+  const handleNameFieldChange = (e) => {
     setName(e.target.value);
   };
 
-  const hanndlePasswordFieldChange = (e) => {
+  const handlePasswordFieldChange = (e) => {
     setPassword(e.target.value);
   };
 
@@ -33,7 +33,7 @@ const Form = () => {
       <form onSubmit={submitForm}>
         <label>
           Name:
-          <input type="text" value={name} onChange={hanndleNameFieldChange} />
+          <input type="text" value={name} onChange={handleNameFieldChange} />
         </label>
         <br />
         <label>
@@ -41,7 +41,7 @@ const Form = () => {
           <input
             type="password"
             value={password}
-            onChange={hanndlePasswordFieldChange}
+            onChange={handlePasswordFieldChange}
           />
         </label>
         <button type="submit" disabled={loading}>
