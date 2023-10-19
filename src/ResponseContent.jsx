@@ -1,7 +1,7 @@
 import React from "react";
 const ResponseContent = ({ response }) => (
   <div>
-    {response && (
+    {response && response.json && (
       <div>
         <strong>Response:</strong>
         <ul>
