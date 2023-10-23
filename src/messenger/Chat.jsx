@@ -8,14 +8,12 @@ const Chat = () => {
 
   const changeInputMessage = (e) => {
     setMessageInput(e.target.value);
-    console.log(messageInput);
   };
 
   const sendMessageOnEnter = (e) => {
     if (e.key === "Enter") {
       setMessages([...messages, { id: uuidv4(), text: messageInput }]);
       setMessageInput("");
-      console.log(messages);
       e.target.value = "";
     }
   };
