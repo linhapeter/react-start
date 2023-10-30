@@ -1,13 +1,11 @@
 import React from "react";
-import Form from "./form/Form";
-import Chat from "./messenger/Chat";
-import "./style.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import Header from "./header/Header";
 const App = () => (
   <div>
-    <h1>Login Form</h1>
-    <Form />
-    <h1>Chat</h1>
-    <Chat />
+    <Router>
+      <Header></Header>
+    </Router>
   </div>
 );
 

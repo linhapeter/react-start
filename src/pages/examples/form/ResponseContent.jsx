@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 const ResponseContent = ({ response }) => (
   <div>
     {response && response.json && (
@@ -12,5 +13,14 @@ const ResponseContent = ({ response }) => (
     )}
   </div>
 );
+
+ResponseContent.propTypes = {
+  response: PropTypes.shape({
+    json: PropTypes.shape({
+      name: PropTypes.string,
+      password: PropTypes.string,
+    }),
+  }),
+};
 
 export default ResponseContent;
