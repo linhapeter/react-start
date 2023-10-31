@@ -7,7 +7,7 @@ import About from "../pages/about/About";
 import Login from "../pages/login/Login";
 import Form from "../pages/examples/form/Form";
 import Chat from "../pages/examples/messenger/Chat";
-import "../style/header.css";
+import "../style/header.scss";
 
 const Header = () => {
   return (

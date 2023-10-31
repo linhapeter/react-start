@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Message from "./Message";
-import "../../../style/chat.css";
+import "../../../style/chat.scss";
 
 const Chat = () => {
   const [messageInput, setMessageInput] = useState("");
