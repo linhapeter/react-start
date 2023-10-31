@@ -23,4 +23,13 @@ ResponseContent.propTypes = {
   }),
 };
 
+ResponseContent.defaultProps = {
+  response: {
+    json: {
+      name: "",
+      password: "",
+    },
+  },
+};
+
 export default ResponseContent;
