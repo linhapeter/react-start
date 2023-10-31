@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../style/header.scss";
-import AppRouting from "../AppRouting";
+import "../../style/header.scss";
+import AppRouting from "../../AppRouting";
 
 const routes = [
   { id: 0, path: "/", label: "Home Page" },
