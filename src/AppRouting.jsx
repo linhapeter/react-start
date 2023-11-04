@@ -5,8 +5,8 @@ import Examples from "./pages/examples/Examples";
 import Blog from "./pages/blog/Blog";
 import About from "./pages/about/About";
 import Login from "./pages/login/Login";
-import Form from "./pages/examples/form/Form";
-import Chat from "./pages/examples/messenger/Chat";
+import Form from "./pages/form/Form";
+import Chat from "./pages/messenger/Chat";
 
 const AppRouting = () => (
   <Routes>
