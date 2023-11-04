@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { fetchData } from "./Api.jsx";
+import { fetchData } from "../../api/api.js";
 import ResponseContent from "./ResponseContent.jsx";
 const Form = () => {
   const [name, setName] = useState("");
