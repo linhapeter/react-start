@@ -17,49 +17,49 @@ export const EXAMPLES_ROUTES_LIST = [
   {
     id: 1,
     component: Form,
-    value: 'Form',
-    path: 'example-1',
+    value: "Form",
+    path: "example-1",
   },
   {
     id: 2,
     component: Chat,
-    value: 'Chat',
-    path: 'example-2',
+    value: "Chat",
+    path: "example-2",
   },
 ];
 export const ROUTES_LIST = [
   {
     id: 1,
     component: Home,
-    value: 'Home',
-    path: '/',
+    value: "Home",
+    path: "/",
   },
   {
     id: 2,
     component: Examples,
-    value: 'Examples',
-    path: '/examples',
-    children: EXAMPLES_ROUTES_LIST
+    value: "Examples",
+    path: "/examples",
+    children: EXAMPLES_ROUTES_LIST,
   },
   {
     id: 3,
     component: Blog,
-    value: 'Blog',
-    path: '/blog',
+    value: "Blog",
+    path: "/blog",
   },
   {
     id: 4,
     component: About,
-    value: 'About',
-    path: '/about',
+    value: "About",
+    path: "/about",
   },
   {
     id: 5,
     component: Login,
-    value: 'Login',
-    path: '/login',
+    value: "Login",
+    path: "/login",
   },
-]
+];
 
 const routeMap = (listOfRoutes) => {
   return listOfRoutes.map((route) => ({
@@ -68,6 +68,6 @@ const routeMap = (listOfRoutes) => {
     children: route.children ? routeMap(route.children) : [],
     exact: true,
   }));
-}
+};
 
 export const routes = routeMap(ROUTES_LIST);

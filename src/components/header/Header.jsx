@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./header.scss";
-import { ROUTES_LIST } from "../../routing/config"
-
+import { ROUTES_LIST } from "../../routing/config";
 
 const renderedLinks = ROUTES_LIST.map((route, id) => (
   <li className="nav-links__li" key={id}>
@@ -14,11 +13,9 @@ const renderedLinks = ROUTES_LIST.map((route, id) => (
 
 const Header = () => {
   return (
-    <div>
-      <nav className="navbar">
-        <ul className="nav-links">{renderedLinks}</ul>
-      </nav>
-    </div>
+    <nav className="navbar">
+      <ul className="nav-links">{renderedLinks}</ul>
+    </nav>
   );
 };
 
